@@ -24,7 +24,7 @@ export default function Create() {
     grade: '',
     section: ''
   });
-
+ 
   const createStudent = () => {
       axios.post('http://localhost:5000/students', student)
   }
@@ -33,7 +33,7 @@ export default function Create() {
       <>
     <h2>Create Student</h2>
     <form className={classes.root} noValidate autoComplete="off">
-      <TextField id="outlined-basic" label="Registration No." variant="outlined" value={student.regNo} onChange={(event) => {
+      <TextField align="center" id="outlined-basic" label="Registration No." variant="outlined" value={student.regNo} onChange={(event) => {
           setStudent({ ...student, regNo: event.target.value})}} />
       <TextField id="outlined-basic" label="Name" variant="outlined" value={student.studentName} onChange={(event) => {
           setStudent({ ...student, studentName: event.target.value})}}/>
